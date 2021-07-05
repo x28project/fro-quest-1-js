@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fro Quest</title>
+    <meta
+      name="author"
+      content="X28 Project, Annihilate/Shun, Fro Quest, Cirrus"
+    />
+    <meta
+      name="description"
+      content="Fro Quest (FQ1), by X28 Project, using the Sarien.net engine."
+    />
+    <meta
+      name="keywords"
+      content="X28 Project, Annihilate/Shun, Fro Quest, FQ1, Sarien, Sierra, AGI, Quest, Adventure, Game, Further Than The End, X28 Records, Cirrus, Rock More Than Most, Rocks More Than Most, Music, Metal, Rock, Progressive, New Age, New Wave"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="msapplication-square310x310logo" content="favicon-310.png" />
+    <meta name="msapplication-wide310x150logo" content="favicon-310x150.png" />
+    <link rel="icon" type="image/png" sizes="196x196" href="favicon-196.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="180x180"
+      href="favicon-180.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="favicon-152.png"
+    />
+    <meta name="msapplication-square150x150logo" content="favicon-150.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="favicon-144.png"
+    />
+    <meta name="msapplication-TileImage" content="favicon-144.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon-128.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="favicon-120.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="favicon-114.png"
+    />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="76x76"
+      href="favicon-76.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="favicon-72.png"
+    />
+    <meta name="msapplication-square70x70logo" content="favicon-70.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="60x60"
+      href="favicon-60.png"
+    />
+    <link rel="apple-touch-icon-precomposed" href="favicon-57.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="24x24" href="favicon-24.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+    <meta name="application-name" content="Fro Quest" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <link rel="stylesheet" href="play.min.css" type="text/css" />
+    <script type="text/javascript" src="interpreter/hacks.js"></script>
+    <script type="text/javascript" src="interpreter/io.js"></script>
+    <script type="text/javascript" src="interpreter/test.js"></script>
+    <script type="text/javascript" src="interpreter/sarien.js"></script>
+    <script type="text/javascript" src="interpreter/menu.js"></script>
+    <script type="text/javascript" src="interpreter/picture.js"></script>
+    <script type="text/javascript" src="interpreter/sound.js"></script>
+    <script type="text/javascript" src="interpreter/commands.js"></script>
+    <script type="text/javascript" src="interpreter/text.js"></script>
+    <script type="text/javascript" src="interpreter/agi.js"></script>
+    <script type="text/javascript" src="interpreter/agent.js"></script>
+    <script type="text/javascript" src="interpreter/utils.js"></script>
+    <script type="text/javascript" src="interpreter/view.js"></script>
+    <script type="text/javascript" src="interpreter/canvas.js"></script>
+    <script type="text/javascript" src="interpreter/reservedwords.js"></script>
+    <script type="text/javascript" src="interpreter/base64.js"></script>
+    <script type="text/javascript" src="interpreter/state.js"></script>
+  </head>
+  <body>
+    <div
+      id="loading"
+      style="
+        position: fixed;
+        width: 75%;
+        left: 50%;
+        margin: 0 0 0 -37.5%;
+        height: 100%;
+        z-index: 9999;
+      "
+    >
+      <img
+        alt="Loading"
+        src="loading.gif"
+        style="
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+        "
+      />
+    </div>
+    <div id="edge"></div>
+    <div id="center">
+      <div id="sarien"></div>
+    </div>
+    <audio id="snd1" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 01 - You Have Arrived (Fro Quest 1 Theme).ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 01 - You Have Arrived (Fro Quest 1 Theme).mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd30" preload="auto">
+      <source src="Fro Quest - FQ1 - 12 - De-elevate.ogg" type="audio/ogg" />
+      <source src="Fro Quest - FQ1 - 12 - De-elevate.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="snd31" preload="auto">
+      <source src="Fro Quest - FQ1 - 13 - Well What Err.ogg" type="audio/ogg" />
+      <source
+        src="Fro Quest - FQ1 - 13 - Well What Err.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd4" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 14 - ADST (Adolescent Deviated Shinobi Tortoises).ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 14 - ADST (Adolescent Deviated Shinobi Tortoises).mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd41" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - B1 - Ends Well Thats All Well.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - B1 - Ends Well Thats All Well.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd5" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 03 - This Thumbs Up Is for You.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 03 - This Thumbs Up Is for You.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd60" preload="auto">
+      <source src="Fro Quest - FQ1 - 05 - Moves in Awe.ogg" type="audio/ogg" />
+      <source src="Fro Quest - FQ1 - 05 - Moves in Awe.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="snd61" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 06 - A Man with a Hat.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 06 - A Man with a Hat.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd70" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 07 - So Much to See.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 07 - So Much to See.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd71" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 16 - Unwanted Advances.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 16 - Unwanted Advances.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd72" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 18 - Time to Regulate.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 18 - Time to Regulate.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd8" preload="auto">
+      <source src="Fro Quest - FQ1 - 10 - Road Block.ogg" type="audio/ogg" />
+      <source src="Fro Quest - FQ1 - 10 - Road Block.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="snd9" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 02 - Twinkle Twinkle Little Star.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 02 - Twinkle Twinkle Little Star.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd10" preload="auto">
+      <source src="Fro Quest - FQ1 - 04 - Down Time.ogg" type="audio/ogg" />
+      <source src="Fro Quest - FQ1 - 04 - Down Time.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="snd11" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 15 - Finally Something to Live For.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 15 - Finally Something to Live For.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd12" preload="auto">
+      <source src="Fro Quest - FQ1 - 11 - Limited Sky.ogg" type="audio/ogg" />
+      <source src="Fro Quest - FQ1 - 11 - Limited Sky.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="snd13" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 08 - Pulling On You.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 08 - Pulling On You.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd14" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 17 - Got to Get You Back.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 17 - Got to Get You Back.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd15" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - 09 - Anares Tranquility.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - 09 - Anares Tranquility.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd16" preload="auto">
+      <source src="Fro Quest - FQ1 - 19 - Room for More.ogg" type="audio/ogg" />
+      <source
+        src="Fro Quest - FQ1 - 19 - Room for More.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd100" preload="auto">
+      <source
+        src="Fro Quest - FQ1 - FX - Elevator Impact.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="Fro Quest - FQ1 - FX - Elevator Impact.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="snd101" preload="auto">
+      <source src="Fro Quest - FQ1 - FX - Splat.ogg" type="audio/ogg" />
+      <source src="Fro Quest - FQ1 - FX - Splat.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="snd102" preload="auto">
+      <source src="Fro Quest - FQ1 - FX - Sad Trombone.ogg" type="audio/ogg" />
+      <source src="Fro Quest - FQ1 - FX - Sad Trombone.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="snd103" preload="auto">
+      <source src="Fro Quest - FQ1 - FX - Shot.ogg" type="audio/ogg" />
+      <source src="Fro Quest - FQ1 - FX - Shot.mp3" type="audio/mpeg" />
+    </audio>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+[submodule "fro-quest-1-js-assets"]
+	path = fro-quest-1-js-assets
+	url = https://github.com/x28project/fro-quest-1-js-assets
+[submodule "fro-quest-1-js-sariendotnet-interpreter"]
+	path = fro-quest-1-js-sariendotnet-interpreter
+	url = https://github.com/x28project/fro-quest-1-js-sariendotnet-interpreter
