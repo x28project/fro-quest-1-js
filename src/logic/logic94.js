@@ -117,7 +117,7 @@ MESSAGES[94] = [
   '',
   'You are now dead.',
   'Thank you for playing Fro Quest 1. Better luck next time!',
-  '\n        Fro Quest 1\n\n        Version 1_0\n\n  Designed by X28 Project  \n\n    (C)2015 X28 Project\n    All Rights Reserved\n\n     www_x28project_com\n',
+  '\n        Fro Quest 1\n\n        Version 1_1\n\n  Designed by X28 Project  \n\n    (C)2015 X28 Project\n    All Rights Reserved\n\n     www_x28project_com\n',
   '\n         Fro Quest\n (Original Game Soundtrack) \n\n   Remixed and Remastered   \n\n   Download available at:   \n\n     www_x28project_com     \n',
   'You are dead! You can only restore, restart, quit the game or view your inventory.',
 ];

@@ -194,7 +194,7 @@ window.logic99 = function () {
 MESSAGES[99] = [
   '',
   'You gottum!',
-  '\n  Fro Quest 1  \n\n  Version 1_0  \n',
+  '\n  Fro Quest 1  \n\n  Version 1_1  \n',
   'new room: ',
   'x: ',
   'y: ',
