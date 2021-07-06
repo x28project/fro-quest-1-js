@@ -1,4 +1,4 @@
-window.logic88 = function() {
+window.logic88 = function () {
   logic: while (1) {
     if (waiting) {
       return true;
@@ -8,7 +8,7 @@ window.logic88 = function() {
     }
     logicSwitch: switch (jumptoLine) {
       case 0:
-        if (!(cmd_isset(123))) {
+        if (!cmd_isset(123)) {
           jumpTo(500);
           break logicSwitch;
         }
@@ -82,7 +82,7 @@ window.logic88 = function() {
         jumpTo(1);
         break logicSwitch;
       case 505:
-        if (!(cmd_equaln(0, 9))) {
+        if (!cmd_equaln(0, 9)) {
           jumpTo(506);
           break logicSwitch;
         }
@@ -103,7 +103,7 @@ window.logic88 = function() {
         cmd_reset(133);
       case 500:
         if (cmd_isset(130)) {
-          if (!cmd_equaln(75, (70 - 11)) && !cmd_equaln(76, (95 + 7))) {
+          if (!cmd_equaln(75, 70 - 11) && !cmd_equaln(76, 95 + 7)) {
             cmd_reset(130);
             cmd_decrement(92);
             cmd_step_size(229, 92);
@@ -136,11 +136,11 @@ window.logic88 = function() {
         if (cmd_isset(195) && cmd_equaln(0, 8) && cmd_isset(132)) {
           cmd_reset(132);
           cmd_print(m1);
-jumptoLineArray = [2800];
-jumpTo(2800, 88);
-break logic;
+          jumptoLineArray = [2800];
+          jumpTo(2800, 88);
+          break logic;
         }
-case 2800:
+      case 2800:
         if (cmd_isset(128)) {
           cmd_reset(128);
           if (!cmd_isset(169)) {
@@ -164,21 +164,21 @@ case 2800:
           cmd_end_of_loop(254, 132);
           cmd_accept_input();
         }
-case 2801:
-ifSkip = ifSkipArrayShift();
+      case 2801:
+        ifSkip = ifSkipArrayShift();
         if ((cmd_isset(169) && cmd_equaln(0, 4) && cmd_isset(132)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-          cmd_reset(132);
-          cmd_print(m2);
-jumptoLineArray = [2801, 28000];
-ifSkipArray = [true];
-jumpTo(2801, 88);
-break logic;
-case 28000:
-          cmd_set_loop(254, 1);
-          cmd_normal_cycle(254);
-}
+          switch (jumptoLineArrayShift()) {
+            default:
+              cmd_reset(132);
+              cmd_print(m2);
+              jumptoLineArray = [2801, 28000];
+              ifSkipArray = [true];
+              jumpTo(2801, 88);
+              break logic;
+            case 28000:
+              cmd_set_loop(254, 1);
+              cmd_normal_cycle(254);
+          }
         }
         if (cmd_isset(129)) {
           cmd_reset(129);
@@ -263,31 +263,34 @@ case 28000:
         if (cmd_isset(247) && cmd_isset(135)) {
           cmd_increment(74);
         }
-case 2802:
-ifSkip = ifSkipArrayShift();
-        if ((cmd_isset(247) && cmd_isset(135) && cmd_equaln(74, 20)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-          cmd_reset(135);
-          cmd_print(m3);
-jumptoLineArray = [2802, 28000];
-ifSkipArray = [true];
-jumpTo(2802, 88);
-break logic;
-case 28000:
-          cmd_accept_input();
-}
+      case 2802:
+        ifSkip = ifSkipArrayShift();
+        if (
+          (cmd_isset(247) && cmd_isset(135) && cmd_equaln(74, 20)) ||
+          ifSkip
+        ) {
+          switch (jumptoLineArrayShift()) {
+            default:
+              cmd_reset(135);
+              cmd_print(m3);
+              jumptoLineArray = [2802, 28000];
+              ifSkipArray = [true];
+              jumpTo(2802, 88);
+              break logic;
+            case 28000:
+              cmd_accept_input();
+          }
         }
-        if (!(cmd_isset(127))) {
+        if (!cmd_isset(127)) {
           jumpTo(507);
           break logicSwitch;
         }
         cmd_reset(127);
-        if (!(cmd_isset(185))) {
+        if (!cmd_isset(185)) {
           jumpTo(508);
           break logicSwitch;
         }
-        if (!(!cmd_isset(186))) {
+        if (!!cmd_isset(186)) {
           jumpTo(509);
           break logicSwitch;
         }
@@ -313,10 +316,10 @@ case 28000:
         break logicSwitch;
       case 508:
         cmd_print(m4);
-jumptoLineArray = [2803];
-jumpTo(2803, 88);
-break logic;
-case 2803:
+        jumptoLineArray = [2803];
+        jumpTo(2803, 88);
+        break logic;
+      case 2803:
         cmd_erase(229);
       case 2:
         cmd_accept_input();
@@ -381,38 +384,37 @@ case 2803:
           cmd_normal_cycle(253);
           cmd_draw(253);
         }
-case 2804:
-ifSkip = ifSkipArrayShift();
-        if ((cmd_isset(125)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-          cmd_reset(125);
-          cmd_print(m6);
-jumptoLineArray = [2804, 28000];
-ifSkipArray = [true];
-jumpTo(2804, 88);
-break logic;
-case 28000:
-          cmd_accept_input();
-          cmd_erase(229);
-          cmd_reset(124);
-}
+      case 2804:
+        ifSkip = ifSkipArrayShift();
+        if (cmd_isset(125) || ifSkip) {
+          switch (jumptoLineArrayShift()) {
+            default:
+              cmd_reset(125);
+              cmd_print(m6);
+              jumptoLineArray = [2804, 28000];
+              ifSkipArray = [true];
+              jumpTo(2804, 88);
+              break logic;
+            case 28000:
+              cmd_accept_input();
+              cmd_erase(229);
+              cmd_reset(124);
+          }
         }
         if (cmd_isset(133)) {
           cmd_reset(133);
           cmd_erase(254);
         }
         return;
-
     }
   }
-}
+};
 MESSAGES[88] = [
-  "",
-  "There is a certain air about him.",
+  '',
+  'There is a certain air about him.',
   "Whoa! Someone is burning for you. They're burning, they're burning, they're burning for you!",
-  "Awww, this game is a romantic comedy!",
-  "There is definitely something strange about that warmth resistant snowman.",
-  "Score +64",
-  "You see nothing out of the ordinary."
+  'Awww, this game is a romantic comedy!',
+  'There is definitely something strange about that warmth resistant snowman.',
+  'Score +64',
+  'You see nothing out of the ordinary.',
 ];

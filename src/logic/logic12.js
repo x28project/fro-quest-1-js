@@ -1,4 +1,4 @@
-window.logic12 = function() {
+window.logic12 = function () {
   logic: while (1) {
     if (waiting) {
       return true;
@@ -79,19 +79,19 @@ window.logic12 = function() {
           cmd_sound(12, 147);
           cmd_show_pic();
         }
-case 2800:
-ifSkip = ifSkipArrayShift();
-        if ((cmd_said(46, 109)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-          cmd_print(m1);
-jumptoLineArray = [2800, 28000];
-ifSkipArray = [true];
-jumpTo(2800, 12);
-break logic;
-case 28000:
-          return;
-}
+      case 2800:
+        ifSkip = ifSkipArrayShift();
+        if (cmd_said(46, 109) || ifSkip) {
+          switch (jumptoLineArrayShift()) {
+            default:
+              cmd_print(m1);
+              jumptoLineArray = [2800, 28000];
+              ifSkipArray = [true];
+              jumpTo(2800, 12);
+              break logic;
+            case 28000:
+              return;
+          }
         }
         if (cmd_isset(70)) {
           cmd_reset(70);
@@ -188,14 +188,20 @@ case 28000:
           cmd_set(80);
         }
       case 5:
-        if (cmd_isset(76) && cmd_isset(77) && cmd_isset(78) && cmd_isset(79) && cmd_isset(80)) {
+        if (
+          cmd_isset(76) &&
+          cmd_isset(77) &&
+          cmd_isset(78) &&
+          cmd_isset(79) &&
+          cmd_isset(80)
+        ) {
           cmd_reset(76);
           cmd_reset(77);
           cmd_reset(78);
           cmd_reset(79);
           cmd_reset(80);
         }
-        if (!(cmd_isset(81))) {
+        if (!cmd_isset(81)) {
           jumpTo(500);
           break logicSwitch;
         }
@@ -203,11 +209,11 @@ case 28000:
         cmd_current_loop(125, 86);
         cmd_set_cel(125, 0);
         cmd_normal_cycle(125);
-        if (!(!cmd_isset(86))) {
+        if (!!cmd_isset(86)) {
           jumpTo(501);
           break logicSwitch;
         }
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(502);
           break logicSwitch;
         }
@@ -223,7 +229,7 @@ case 28000:
         jumpTo(7);
         break logicSwitch;
       case 501:
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(503);
           break logicSwitch;
         }
@@ -238,21 +244,21 @@ case 28000:
       case 7:
         cmd_set(82);
       case 500:
-        if (!(cmd_isset(82))) {
+        if (!cmd_isset(82)) {
           jumpTo(504);
           break logicSwitch;
         }
         cmd_current_loop(125, 86);
-        if (!(!cmd_isset(86))) {
+        if (!!cmd_isset(86)) {
           jumpTo(505);
           break logicSwitch;
         }
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(506);
           break logicSwitch;
         }
         cmd_current_cel(125, 87);
-        if (!(cmd_equaln(87, 11))) {
+        if (!cmd_equaln(87, 11)) {
           jumpTo(507);
           break logicSwitch;
         }
@@ -264,7 +270,7 @@ case 28000:
         break logicSwitch;
       case 506:
         cmd_current_cel(125, 87);
-        if (!(cmd_equaln(87, 11))) {
+        if (!cmd_equaln(87, 11)) {
           jumpTo(508);
           break logicSwitch;
         }
@@ -276,12 +282,12 @@ case 28000:
         jumpTo(9);
         break logicSwitch;
       case 505:
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(509);
           break logicSwitch;
         }
         cmd_current_cel(125, 87);
-        if (!(cmd_equaln(87, 11))) {
+        if (!cmd_equaln(87, 11)) {
           jumpTo(510);
           break logicSwitch;
         }
@@ -293,7 +299,7 @@ case 28000:
         break logicSwitch;
       case 509:
         cmd_current_cel(125, 87);
-        if (!(cmd_equaln(87, 11))) {
+        if (!cmd_equaln(87, 11)) {
           jumpTo(511);
           break logicSwitch;
         }
@@ -303,17 +309,17 @@ case 28000:
       case 511:
       case 504:
       case 9:
-        if (!(cmd_isset(83))) {
+        if (!cmd_isset(83)) {
           jumpTo(512);
           break logicSwitch;
         }
         cmd_reset(83);
         cmd_current_loop(125, 86);
-        if (!(!cmd_isset(86))) {
+        if (!!cmd_isset(86)) {
           jumpTo(513);
           break logicSwitch;
         }
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(514);
           break logicSwitch;
         }
@@ -326,7 +332,7 @@ case 28000:
         jumpTo(11);
         break logicSwitch;
       case 513:
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(515);
           break logicSwitch;
         }
@@ -337,17 +343,17 @@ case 28000:
         cmd_move_obj(125, 69, 80, 1, 84);
       case 512:
       case 11:
-        if (!(cmd_isset(84))) {
+        if (!cmd_isset(84)) {
           jumpTo(516);
           break logicSwitch;
         }
         cmd_reset(84);
         cmd_current_loop(125, 86);
-        if (!(!cmd_isset(86))) {
+        if (!!cmd_isset(86)) {
           jumpTo(517);
           break logicSwitch;
         }
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(518);
           break logicSwitch;
         }
@@ -398,7 +404,7 @@ case 28000:
         jumpTo(13);
         break logicSwitch;
       case 517:
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(519);
           break logicSwitch;
         }
@@ -452,7 +458,7 @@ case 28000:
         cmd_draw(132);
         cmd_end_of_loop(132, 100);
       case 13:
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(520);
           break logicSwitch;
         }
@@ -463,18 +469,18 @@ case 28000:
         cmd_move_obj(125, 159, 167, 4, 85);
       case 516:
       case 14:
-        if (!(cmd_isset(85))) {
+        if (!cmd_isset(85)) {
           jumpTo(521);
           break logicSwitch;
         }
         cmd_reset(85);
         cmd_current_loop(125, 86);
-        if (!(cmd_equaln(86, 0))) {
+        if (!cmd_equaln(86, 0)) {
           jumpTo(522);
           break logicSwitch;
         }
         cmd_set_loop(125, 1);
-        if (!(!cmd_isset(86))) {
+        if (!!cmd_isset(86)) {
           jumpTo(523);
           break logicSwitch;
         }
@@ -490,7 +496,7 @@ case 28000:
         cmd_set_loop(125, 0);
       case 16:
         cmd_erase(125);
-        if (!(!cmd_isset(87))) {
+        if (!!cmd_isset(87)) {
           jumpTo(524);
           break logicSwitch;
         }
@@ -545,12 +551,8 @@ case 28000:
           if (AGI.break_all_logics) return;
         }
         return;
-
     }
   }
-}
-MESSAGES[12] = [
-  "",
-  "Everything is kinda up in the air right now..."
-];
-CONTROLS[12] = "";
+};
+MESSAGES[12] = ['', 'Everything is kinda up in the air right now...'];
+CONTROLS[12] = '';

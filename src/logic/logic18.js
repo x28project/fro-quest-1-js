@@ -1,4 +1,4 @@
-window.logic18 = function() {
+window.logic18 = function () {
   logic: while (1) {
     if (waiting) {
       return true;
@@ -90,113 +90,113 @@ window.logic18 = function() {
           cmd_set(44);
           cmd_show_pic();
         }
-case 2800:
-ifSkip = ifSkipArrayShift();
-        if ((cmd_isset(40)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-          cmd_reset(40);
-          cmd_increment(100);
-          if (cmd_equaln(100, 1)) {
-            cmd_end_of_loop(41, 40);
+      case 2800:
+        ifSkip = ifSkipArrayShift();
+        if (cmd_isset(40) || ifSkip) {
+          switch (jumptoLineArrayShift()) {
+            default:
+              cmd_reset(40);
+              cmd_increment(100);
+              if (cmd_equaln(100, 1)) {
+                cmd_end_of_loop(41, 40);
+              }
+              if (cmd_equaln(100, 2)) {
+                cmd_set_loop(41, 1);
+                cmd_set_cel(41, 0);
+                cmd_end_of_loop(41, 40);
+              }
+              if (cmd_equaln(100, 3)) {
+                cmd_erase(41);
+                cmd_erase(26);
+                cmd_draw(23);
+                cmd_end_of_loop(23, 40);
+              }
+              if (cmd_equaln(100, 4)) {
+                cmd_set_loop(23, 1);
+                cmd_set_cel(23, 0);
+                cmd_end_of_loop(23, 40);
+              }
+              if (cmd_equaln(100, 5)) {
+                cmd_set_loop(23, 2);
+                cmd_set_cel(23, 0);
+                cmd_end_of_loop(23, 40);
+              }
+              if (cmd_equaln(100, 6)) {
+                cmd_erase(23);
+                cmd_draw(42);
+                cmd_end_of_loop(42, 40);
+              }
+              if (cmd_equaln(100, 7)) {
+                cmd_set_loop(42, 1);
+                cmd_set_cel(42, 0);
+                cmd_end_of_loop(42, 40);
+              }
+              if (cmd_equaln(100, 8)) {
+                cmd_set_loop(42, 2);
+                cmd_set_cel(42, 0);
+                cmd_assignn(91, 3);
+                cmd_cycle_time(42, 91);
+                cmd_end_of_loop(42, 40);
+              }
+              if (cmd_equaln(100, 9)) {
+                cmd_set_cel(42, 5);
+                cmd_reverse_loop(42, 40);
+              }
+              if (cmd_equaln(100, 10)) {
+                cmd_set_loop(42, 1);
+                cmd_set_cel(42, 11);
+                cmd_assignn(91, 1);
+                cmd_cycle_time(42, 91);
+                cmd_reverse_loop(42, 40);
+              }
+            case 28000:
+              ifSkip = ifSkipArrayShift();
+              if (cmd_equaln(100, 11) || ifSkip) {
+                switch (jumptoLineArrayShift()) {
+                  default:
+                    cmd_reset(15);
+                    cmd_assignn(21, 20);
+                    cmd_print(m1);
+                    jumptoLineArray = [2800, 28000, 280000];
+                    ifSkipArray = [true, true];
+                    jumpTo(2800, 18);
+                    break logic;
+                  case 280000:
+                    cmd_reset(15);
+                    cmd_assignn(21, 30);
+                    cmd_print(m2);
+                    jumptoLineArray = [2800, 28000, 280001];
+                    ifSkipArray = [true, true];
+                    jumpTo(2800, 18);
+                    break logic;
+                  case 280001:
+                    cmd_reset(15);
+                    cmd_assignn(21, 15);
+                    cmd_print(m3);
+                    jumptoLineArray = [2800, 28000, 280002];
+                    ifSkipArray = [true, true];
+                    jumpTo(2800, 18);
+                    break logic;
+                  case 280002:
+                    cmd_load_view(0);
+                    cmd_set_view(42, 0);
+                    cmd_set_loop(42, 0);
+                    cmd_set_cel(42, 7);
+                    cmd_start_cycling(42);
+                    cmd_move_obj(42, 120, 140, 1, 40);
+                }
+              }
+              if (cmd_equaln(100, 12)) {
+                cmd_stop_cycling(42);
+                cmd_set_loop(42, 1);
+                cmd_set_cel(42, 3);
+                cmd_set(40);
+              }
+              if (cmd_equaln(100, 13)) {
+                cmd_new_room(2);
+                if (AGI.break_all_logics) return;
+              }
           }
-          if (cmd_equaln(100, 2)) {
-            cmd_set_loop(41, 1);
-            cmd_set_cel(41, 0);
-            cmd_end_of_loop(41, 40);
-          }
-          if (cmd_equaln(100, 3)) {
-            cmd_erase(41);
-            cmd_erase(26);
-            cmd_draw(23);
-            cmd_end_of_loop(23, 40);
-          }
-          if (cmd_equaln(100, 4)) {
-            cmd_set_loop(23, 1);
-            cmd_set_cel(23, 0);
-            cmd_end_of_loop(23, 40);
-          }
-          if (cmd_equaln(100, 5)) {
-            cmd_set_loop(23, 2);
-            cmd_set_cel(23, 0);
-            cmd_end_of_loop(23, 40);
-          }
-          if (cmd_equaln(100, 6)) {
-            cmd_erase(23);
-            cmd_draw(42);
-            cmd_end_of_loop(42, 40);
-          }
-          if (cmd_equaln(100, 7)) {
-            cmd_set_loop(42, 1);
-            cmd_set_cel(42, 0);
-            cmd_end_of_loop(42, 40);
-          }
-          if (cmd_equaln(100, 8)) {
-            cmd_set_loop(42, 2);
-            cmd_set_cel(42, 0);
-            cmd_assignn(91, 3);
-            cmd_cycle_time(42, 91);
-            cmd_end_of_loop(42, 40);
-          }
-          if (cmd_equaln(100, 9)) {
-            cmd_set_cel(42, 5);
-            cmd_reverse_loop(42, 40);
-          }
-          if (cmd_equaln(100, 10)) {
-            cmd_set_loop(42, 1);
-            cmd_set_cel(42, 11);
-            cmd_assignn(91, 1);
-            cmd_cycle_time(42, 91);
-            cmd_reverse_loop(42, 40);
-          }
-case 28000:
-ifSkip = ifSkipArrayShift();
-          if ((cmd_equaln(100, 11)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-            cmd_reset(15);
-            cmd_assignn(21, 20);
-            cmd_print(m1);
-jumptoLineArray = [2800, 28000, 280000];
-ifSkipArray = [true, true];
-jumpTo(2800, 18);
-break logic;
-case 280000:
-            cmd_reset(15);
-            cmd_assignn(21, 30);
-            cmd_print(m2);
-jumptoLineArray = [2800, 28000, 280001];
-ifSkipArray = [true, true];
-jumpTo(2800, 18);
-break logic;
-case 280001:
-            cmd_reset(15);
-            cmd_assignn(21, 15);
-            cmd_print(m3);
-jumptoLineArray = [2800, 28000, 280002];
-ifSkipArray = [true, true];
-jumpTo(2800, 18);
-break logic;
-case 280002:
-            cmd_load_view(0);
-            cmd_set_view(42, 0);
-            cmd_set_loop(42, 0);
-            cmd_set_cel(42, 7);
-            cmd_start_cycling(42);
-            cmd_move_obj(42, 120, 140, 1, 40);
-}
-          }
-          if (cmd_equaln(100, 12)) {
-            cmd_stop_cycling(42);
-            cmd_set_loop(42, 1);
-            cmd_set_cel(42, 3);
-            cmd_set(40);
-          }
-          if (cmd_equaln(100, 13)) {
-            cmd_new_room(2);
-            if (AGI.break_all_logics) return;
-          }
-}
         }
         if (cmd_isset(42)) {
           cmd_reset(42);
@@ -276,14 +276,13 @@ case 280002:
           }
         }
         return;
-
     }
   }
-}
+};
 MESSAGES[18] = [
-  "",
+  '',
   "Whoa, that's a nice Fro!\n\nOf course it is.\n\nFor many years you have lathered, rinsed, and most importantly...repeated.\n\nThis has prepared you for adventure.",
-  "Something is happening to the land you call home.\n\nStrange characters are all around.\n\nNo one can escape.\n\nDisaster lurks around every corner (maybe more like every other corner, give or take).\n\nSomeone must stand up (straight, stand up straight, posture is important) and set things right!",
-  "It's up to you to save the day, or at least try and find something to do..."
+  'Something is happening to the land you call home.\n\nStrange characters are all around.\n\nNo one can escape.\n\nDisaster lurks around every corner (maybe more like every other corner, give or take).\n\nSomeone must stand up (straight, stand up straight, posture is important) and set things right!',
+  "It's up to you to save the day, or at least try and find something to do...",
 ];
-CONTROLS[18] = "";
+CONTROLS[18] = '';

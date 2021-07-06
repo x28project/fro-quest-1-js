@@ -1,4 +1,4 @@
-window.logic86 = function() {
+window.logic86 = function () {
   logic: while (1) {
     if (waiting) {
       return true;
@@ -367,23 +367,22 @@ window.logic86 = function() {
         cmd_set_string(s4, m3);
       case 1:
         cmd_print(m73);
-jumptoLineArray = [2800];
-jumpTo(2800, 86);
-break logic;
-case 2800:
+        jumptoLineArray = [2800];
+        jumpTo(2800, 86);
+        break logic;
+      case 2800:
         return;
-
     }
   }
-}
+};
 MESSAGES[86] = [
-  "",
-  "Hint:\n\n",
-  "\n\n",
-  "",
-  "Outside your house:",
+  '',
+  'Hint:\n\n',
+  '\n\n',
+  '',
+  'Outside your house:',
   "'open' 'door'",
-  "Inside your house:",
+  'Inside your house:',
   "'get' hair 'pick'",
   "'get' 'glass' of 'water'",
   "'get' 'candelabra'",
@@ -395,16 +394,16 @@ MESSAGES[86] = [
   "'talk' to 'man'",
   "'get' 'empty' 'glass'",
   "'press' 'up' 'button'",
-  "At the fountain:",
+  'At the fountain:',
   "'look' at 'plaque'",
   "'get' 'hat'",
   "'get' 'rabbit'",
   "'jump' in 'well'",
-  "Inside well, at the elevator:",
-  "Walk into the puddle of water.",
+  'Inside well, at the elevator:',
+  'Walk into the puddle of water.',
   "Inside well, at the tortoise's lair:",
   "'look' at 'stalactite'",
-  "Walk over to the tortoise.",
+  'Walk over to the tortoise.',
   "'release' 'rabbit'",
   "'jump' 'in' 'bed'",
   "'get' 'lotion'",
@@ -412,27 +411,27 @@ MESSAGES[86] = [
   "'get' 'fire'",
   "'press' 'button'",
   "'get' 'rock'",
-  "Do not stand under the elevator.\n\n",
+  'Do not stand under the elevator.\n\n',
   "'throw' 'rock' at 'button'",
-  "At the pole or vortex:",
-  "Walk into the vortex.",
-  "At the mountaintop oasis:",
+  'At the pole or vortex:',
+  'Walk into the vortex.',
+  'At the mountaintop oasis:',
   "'read' 'sign'",
-  "Try to walk off the cliff.",
-  "At the end of the road:",
-  "Walk on the grass to go around the ",
-  "boulder.",
+  'Try to walk off the cliff.',
+  'At the end of the road:',
+  'Walk on the grass to go around the ',
+  'boulder.',
   "Say 'yes' to the man after he asks for ",
-  "your friendship.",
+  'your friendship.',
   "'give' 'balloon' to 'man'",
   "'wear' 'eyeglasses'",
   "'get' 'air' 'elemental'",
-  "At the crumbling wall:",
+  'At the crumbling wall:',
   "'put' 'hat' 'on' 'snowman'",
-  "Wait for the snowman to melt.",
+  'Wait for the snowman to melt.',
   "'give' 'lotion' to 'man'",
   "Picture of neighbor's friend:",
-  "Keep staring at the picture...",
+  'Keep staring at the picture...',
   "'give' 'water' to 'bodyguard'",
   "'get' 'earth' 'elemental'",
   "'get' 'fire' 'elemental' with ",
@@ -445,10 +444,10 @@ MESSAGES[86] = [
   "'kiss' 'heart' 'elemental'",
   "'i' 'love' 'you' 'heart' 'elemental'",
   "'kiss' 'girl'",
-  "In limbo:",
+  'In limbo:',
   "'jump'",
   "'use' 'emergency' 'suicide' 'kit'",
   "'combine' 'elementals'",
-  "There are no more hints.",
-  "%s1%s2%s3%s4%s5%s6"
+  'There are no more hints.',
+  '%s1%s2%s3%s4%s5%s6',
 ];

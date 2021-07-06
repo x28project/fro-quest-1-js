@@ -1,4 +1,4 @@
-window.logic13 = function() {
+window.logic13 = function () {
   logic: while (1) {
     if (waiting) {
       return true;
@@ -8,7 +8,7 @@ window.logic13 = function() {
     }
     logicSwitch: switch (jumptoLine) {
       case 0:
-        if (!(cmd_isset(5))) {
+        if (!cmd_isset(5)) {
           jumpTo(500);
           break logicSwitch;
         }
@@ -41,7 +41,7 @@ window.logic13 = function() {
         cmd_set(73);
         cmd_assignn(100, 0);
         cmd_assignn(101, 0);
-        if (!(cmd_equaln(1, 8))) {
+        if (!cmd_equaln(1, 8)) {
           jumpTo(501);
           break logicSwitch;
         }
@@ -49,12 +49,12 @@ window.logic13 = function() {
         jumpTo(2);
         break logicSwitch;
       case 501:
-        if (!(cmd_equaln(1, 7))) {
+        if (!cmd_equaln(1, 7)) {
           jumpTo(502);
           break logicSwitch;
         }
         cmd_assignn(80, 0);
-        if (!(cmd_lessn(33, 70))) {
+        if (!cmd_lessn(33, 70)) {
           jumpTo(503);
           break logicSwitch;
         }
@@ -62,7 +62,7 @@ window.logic13 = function() {
         jumpTo(1);
         break logicSwitch;
       case 503:
-        if (!(cmd_greatern(33, 154))) {
+        if (!cmd_greatern(33, 154)) {
           jumpTo(504);
           break logicSwitch;
         }
@@ -73,7 +73,7 @@ window.logic13 = function() {
         jumpTo(2);
         break logicSwitch;
       case 502:
-        if (!(cmd_equaln(1, 15))) {
+        if (!cmd_equaln(1, 15)) {
           jumpTo(505);
           break logicSwitch;
         }
@@ -93,7 +93,7 @@ window.logic13 = function() {
       case 505:
         cmd_position(0, 72, 100);
       case 2:
-        if (!(!cmd_equaln(1, 15))) {
+        if (!!cmd_equaln(1, 15)) {
           jumpTo(506);
           break logicSwitch;
         }
@@ -121,140 +121,150 @@ window.logic13 = function() {
           cmd_assignn(6, 0);
           cmd_draw(0);
         }
-        if ((cmd_said(15, 115) || cmd_said(15, 116) || cmd_said(15, 115, 117, 116) || cmd_said(15, 116, 117, 115))) {
+        if (
+          cmd_said(15, 115) ||
+          cmd_said(15, 116) ||
+          cmd_said(15, 115, 117, 116) ||
+          cmd_said(15, 116, 117, 115)
+        ) {
           cmd_print(m1);
           cmd_print(m2);
-jumptoLineArray = [2800];
-jumpTo(2800, 13);
-break logic;
+          jumptoLineArray = [2800];
+          jumpTo(2800, 13);
+          break logic;
         }
-case 2800:
+      case 2800:
         if (cmd_said(15, 118)) {
           cmd_print(m3);
-jumptoLineArray = [2801];
-jumpTo(2801, 13);
-break logic;
+          jumptoLineArray = [2801];
+          jumpTo(2801, 13);
+          break logic;
         }
-case 2801:
+      case 2801:
         if (cmd_said(15, 31)) {
           cmd_print(m4);
           cmd_print(m5);
-jumptoLineArray = [2802];
-jumpTo(2802, 13);
-break logic;
+          jumptoLineArray = [2802];
+          jumpTo(2802, 13);
+          break logic;
         }
-case 2802:
+      case 2802:
         if (cmd_said(15, 68)) {
           cmd_print(m6);
-jumptoLineArray = [2803];
-jumpTo(2803, 13);
-break logic;
+          jumptoLineArray = [2803];
+          jumpTo(2803, 13);
+          break logic;
         }
-case 2803:
+      case 2803:
         if (cmd_said(15, 33)) {
           cmd_print(m7);
-jumptoLineArray = [2804];
-jumpTo(2804, 13);
-break logic;
+          jumptoLineArray = [2804];
+          jumpTo(2804, 13);
+          break logic;
         }
-case 2804:
+      case 2804:
         if (cmd_said(15, 34)) {
           cmd_print(m8);
-jumptoLineArray = [2805];
-jumpTo(2805, 13);
-break logic;
+          jumptoLineArray = [2805];
+          jumpTo(2805, 13);
+          break logic;
         }
-case 2805:
+      case 2805:
         if (cmd_said(15, 35)) {
           cmd_print(m9);
-jumptoLineArray = [2806];
-jumpTo(2806, 13);
-break logic;
+          jumptoLineArray = [2806];
+          jumpTo(2806, 13);
+          break logic;
         }
-case 2806:
+      case 2806:
         if (cmd_said(15, 39)) {
           cmd_print(m10);
-jumptoLineArray = [2807];
-jumpTo(2807, 13);
-break logic;
+          jumptoLineArray = [2807];
+          jumpTo(2807, 13);
+          break logic;
         }
-case 2807:
+      case 2807:
         if (cmd_said(15, 40)) {
           cmd_print(m11);
-jumptoLineArray = [2808];
-jumpTo(2808, 13);
-break logic;
+          jumptoLineArray = [2808];
+          jumpTo(2808, 13);
+          break logic;
         }
-case 2808:
-case 2809:
-ifSkip = ifSkipArrayShift();
-        if ((cmd_said(15)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-          cmd_print(m12);
-jumptoLineArray = [2809, 28000];
-ifSkipArray = [true];
-jumpTo(2809, 13);
-break logic;
-case 28000:
-ifSkip = ifSkipArrayShift();
-          if ((cmd_isset(73)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-            cmd_print(m13);
-jumptoLineArray = [2809, 28000, 280000];
-ifSkipArray = [true, true];
-jumpTo(2809, 13);
-break logic;
-case 280000:
-            jumpTo(4);
-            break logicSwitch;
-}
+      case 2808:
+      case 2809:
+        ifSkip = ifSkipArrayShift();
+        if (cmd_said(15) || ifSkip) {
+          switch (jumptoLineArrayShift()) {
+            default:
+              cmd_print(m12);
+              jumptoLineArray = [2809, 28000];
+              ifSkipArray = [true];
+              jumpTo(2809, 13);
+              break logic;
+            case 28000:
+              ifSkip = ifSkipArrayShift();
+              if (cmd_isset(73) || ifSkip) {
+                switch (jumptoLineArrayShift()) {
+                  default:
+                    cmd_print(m13);
+                    jumptoLineArray = [2809, 28000, 280000];
+                    ifSkipArray = [true, true];
+                    jumpTo(2809, 13);
+                    break logic;
+                  case 280000:
+                    jumpTo(4);
+                    break logicSwitch;
+                }
+              }
+            case 28001:
+              ifSkip = ifSkipArrayShift();
+              if (cmd_greatern(101, 0) || ifSkip) {
+                switch (jumptoLineArrayShift()) {
+                  default:
+                    cmd_print(m14);
+                    jumptoLineArray = [2809, 28001, 280000];
+                    ifSkipArray = [true, true];
+                    jumpTo(2809, 13);
+                    break logic;
+                  case 280000:
+                    jumpTo(4);
+                    break logicSwitch;
+                }
+              }
+              cmd_print(m15);
+              jumptoLineArray = [2812];
+              jumpTo(2812, 13);
+              break logic;
           }
-case 28001:
-ifSkip = ifSkipArrayShift();
-          if ((cmd_greatern(101, 0)) || ifSkip) {
-switch (jumptoLineArrayShift()) {
-default:
-            cmd_print(m14);
-jumptoLineArray = [2809, 28001, 280000];
-ifSkipArray = [true, true];
-jumpTo(2809, 13);
-break logic;
-case 280000:
-            jumpTo(4);
-            break logicSwitch;
-}
-          }
-          cmd_print(m15);
-jumptoLineArray = [2812];
-jumpTo(2812, 13);
-break logic;
-}
         }
-case 2812:
+      case 2812:
       case 4:
-        if ((cmd_said(50, 115) || cmd_said(50, 116) || cmd_said(50, 115, 117, 116) || cmd_said(50, 116, 117, 115))) {
+        if (
+          cmd_said(50, 115) ||
+          cmd_said(50, 116) ||
+          cmd_said(50, 115, 117, 116) ||
+          cmd_said(50, 116, 117, 115)
+        ) {
           cmd_print(m16);
-jumptoLineArray = [2813];
-jumpTo(2813, 13);
-break logic;
+          jumptoLineArray = [2813];
+          jumpTo(2813, 13);
+          break logic;
         }
-case 2813:
+      case 2813:
         if (cmd_said(50, 118)) {
           cmd_print(m17);
-jumptoLineArray = [2814];
-jumpTo(2814, 13);
-break logic;
+          jumptoLineArray = [2814];
+          jumpTo(2814, 13);
+          break logic;
         }
-case 2814:
-        if (!(cmd_isset(70))) {
+      case 2814:
+        if (!cmd_isset(70)) {
           jumpTo(507);
           break logicSwitch;
         }
         cmd_reset(70);
         cmd_current_loop(130, 86);
-        if (!(cmd_equaln(86, 3))) {
+        if (!cmd_equaln(86, 3)) {
           jumpTo(508);
           break logicSwitch;
         }
@@ -310,7 +320,7 @@ case 2814:
             cmd_set(76);
           }
         }
-        if (!(cmd_isset(76))) {
+        if (!cmd_isset(76)) {
           jumpTo(509);
           break logicSwitch;
         }
@@ -320,7 +330,7 @@ case 2814:
         cmd_load_view(132);
         cmd_animate_obj(1);
         cmd_set_view(1, 132);
-        if (!(cmd_lessn(30, 96))) {
+        if (!cmd_lessn(30, 96)) {
           jumpTo(510);
           break logicSwitch;
         }
@@ -342,7 +352,7 @@ case 2814:
         cmd_erase(0);
         cmd_draw(1);
         cmd_end_of_loop(1, 78);
-        if (!(!cmd_isset(230))) {
+        if (!!cmd_isset(230)) {
           jumpTo(511);
           break logicSwitch;
         }
@@ -384,28 +394,28 @@ case 2814:
           if (AGI.break_all_logics) return;
         }
         return;
-
     }
   }
-}
+};
 MESSAGES[13] = [
-  "",
+  '',
   "It's the infamous pole or vortex...",
   "...So that's what it is.",
-  "A bird of prey circles in the distance.",
-  "Looks like a dream.",
-  "Actually, it blocks your way.",
+  'A bird of prey circles in the distance.',
+  'Looks like a dream.',
+  'Actually, it blocks your way.',
   "Isn't that special. No, not really.",
-  "A rock; mind you, one that does not roll.",
-  "So blue... There is even a bird flying around and around and around and around and...",
-  "Happy little clouds. Clouds are very, very free.",
-  "It must lead somewhere.",
+  'A rock; mind you, one that does not roll.',
+  'So blue... There is even a bird flying around and around and around and around and...',
+  'Happy little clouds. Clouds are very, very free.',
+  'It must lead somewhere.',
   "You feel that it's beneath you.",
-  "Where does that pathway go to?",
+  'Where does that pathway go to?',
   "Hey, there's a pole!",
   "Hey, there's a vortex!",
   "Hey, there's a pole or vortex!",
-  "Get it? More like it gets you.",
-  "Talk about something being out of reach."
+  'Get it? More like it gets you.',
+  'Talk about something being out of reach.',
 ];
-CONTROLS[13] = "?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4l5><.XL.)l5><.x5.^l5><.!5.!g5><.^5.!g5><.^5.!Z5><.{5.xPA><.,5.xEA/95.x4A/K5.x/Z5.r/Z5.r/Z5.r/Z5.r/Z5.r/g5.l/g5.l/g5.l/g5.l/g5.l/l5.g/l5.g/l5.g/l5.g/l5.g/r5.Z/r5.Z/r5.Z/r5.Z/r5.Z/x5.U/x5.U/x5.U/x5.U/x5.U/x5.U/!5.P/!5.P/!5.P/!5.P/!5.P/!5.P/!5.P/!5.P/^5.K/^5.K/^5.K><K6<l5.K><K6<l5.K>.U[6[.x5.K>.U[6[.x5.K>.U[6[.x5.K>.U.).!5.E/+5.E/+5.E/+5.E/+5.E/+5.E/{5.9/{5.9/{5.9/{5.9/,5.4/,5.4/,5.4/,5.4/.45,/.45,/.45,/.45,/.95{/.95{/.95{/.95{/.95{/.95{/.95{/.E5+/.E5+/.E5+/.E5+/.E5+/.E5+/.E5+/.E5+/.K5^/.K5^/.K5^/.K5^/.K5^/.K5^/.K5^/.K5^/.P5!/.P5!/.P5!/.P5!/.P5!/.P5!/.P5!/.P5!/.PAx/.PAx/.PAx/.PAx/.PAx/.PAx/.PAx/.PAx/.P595r/.P595r/.P595r/.P595r/.P595r/.P595r/.P595r/.P595r/.P5E5l/.P5E5l/.P5E5l/.P5E5l/.P5E5l";
+CONTROLS[13] =
+  '?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4?4l5><.XL.)l5><.x5.^l5><.!5.!g5><.^5.!g5><.^5.!Z5><.{5.xPA><.,5.xEA/95.x4A/K5.x/Z5.r/Z5.r/Z5.r/Z5.r/Z5.r/g5.l/g5.l/g5.l/g5.l/g5.l/l5.g/l5.g/l5.g/l5.g/l5.g/r5.Z/r5.Z/r5.Z/r5.Z/r5.Z/x5.U/x5.U/x5.U/x5.U/x5.U/x5.U/!5.P/!5.P/!5.P/!5.P/!5.P/!5.P/!5.P/!5.P/^5.K/^5.K/^5.K><K6<l5.K><K6<l5.K>.U[6[.x5.K>.U[6[.x5.K>.U[6[.x5.K>.U.).!5.E/+5.E/+5.E/+5.E/+5.E/+5.E/{5.9/{5.9/{5.9/{5.9/,5.4/,5.4/,5.4/,5.4/.45,/.45,/.45,/.45,/.95{/.95{/.95{/.95{/.95{/.95{/.95{/.E5+/.E5+/.E5+/.E5+/.E5+/.E5+/.E5+/.E5+/.K5^/.K5^/.K5^/.K5^/.K5^/.K5^/.K5^/.K5^/.P5!/.P5!/.P5!/.P5!/.P5!/.P5!/.P5!/.P5!/.PAx/.PAx/.PAx/.PAx/.PAx/.PAx/.PAx/.PAx/.P595r/.P595r/.P595r/.P595r/.P595r/.P595r/.P595r/.P595r/.P5E5l/.P5E5l/.P5E5l/.P5E5l/.P5E5l';
