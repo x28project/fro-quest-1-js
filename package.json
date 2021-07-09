@@ -23,11 +23,12 @@
     "build": "webpack --mode production",
     "clean": "npx rimraf dist node_modules",
     "lint": "eslint .",
+    "postinstall": "cd ./fro-quest-1-js-assets/ && git submodule init && git submodule update && cd ../fro-quest-1-js-sariendotnet-interpreter/ && git submodule init && git submodule update",
     "server": "npx http-server dist",
     "watch": "webpack --watch"
   },
   "author": "X28 Project <x28project@gmail.com> (http://www.x28project.com)",
-  "license": "UNLICENSED",
+  "license": "CC-BY-NC-ND-4.0",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
